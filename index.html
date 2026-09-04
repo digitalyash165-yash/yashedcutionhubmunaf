@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Trade With Munaf™</title>
 
-<!-- ================= META PIXEL ================= -->
+<!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -26,19 +26,14 @@ fbq('track','PageView');
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=838383939393&ev=PageView&noscript=1">
 </noscript>
-<!-- ============== END META PIXEL ============== -->
-
 
 <style>
-
-/* ================= BASIC ================= */
 
 *{
     box-sizing:border-box;
 }
 
-html,
-body{
+html,body{
     margin:0;
     padding:0;
     min-height:100%;
@@ -52,9 +47,6 @@ body{
     justify-content:center;
 }
 
-
-/* ================= MAIN PAGE ================= */
-
 .page{
     width:100%;
     max-width:707px;
@@ -67,16 +59,12 @@ body{
         rgba(0,174,255,.08),
         transparent 24%
     ),
-
     linear-gradient(
         180deg,
         #0d1016 0%,
         #10131a 100%
     );
 }
-
-
-/* ================= CARD ================= */
 
 .card{
     min-height:calc(100vh - 38px);
@@ -92,20 +80,7 @@ body{
 }
 
 
-/* ================= PROFILE / PNG LOGO ================= */
-
-/*
-   अपनी फोटो का नाम नीचे src में बदल सकते हो।
-
-   PNG:
-   logo.png
-
-   JPG:
-   logo.jpg
-
-   WEBP:
-   logo.webp
-*/
+/* PROFILE / PNG LOGO */
 
 .profile{
     width:205px;
@@ -128,7 +103,7 @@ body{
 }
 
 
-/* ================= TITLE ================= */
+/* TITLE */
 
 h1{
     margin:0;
@@ -153,7 +128,7 @@ h1 span{
 }
 
 
-/* ================= TRUSTED ================= */
+/* TRUSTED */
 
 .trusted{
     margin:31px 0 18px;
@@ -166,7 +141,7 @@ h1 span{
 }
 
 
-/* ================= INFO BOX ================= */
+/* INFO BOX */
 
 .info{
     height:70px;
@@ -189,7 +164,7 @@ h1 span{
 }
 
 
-/* ================= NOTICE ================= */
+/* NOTICE */
 
 .notice{
     margin:20px 0 25px;
@@ -212,7 +187,7 @@ h1 span{
 }
 
 
-/* ================= TELEGRAM BUTTON ================= */
+/* TELEGRAM BUTTON */
 
 .cta{
     width:100%;
@@ -240,6 +215,8 @@ h1 span{
     0 0 24px rgba(0,180,255,.45);
 
     cursor:pointer;
+
+    transition:transform .15s ease;
 }
 
 .cta:active{
@@ -247,7 +224,7 @@ h1 span{
 }
 
 
-/* ================= FEATURES ================= */
+/* FEATURES */
 
 .features{
     margin-top:27px;
@@ -274,7 +251,9 @@ h1 span{
 }
 
 
-/* ================= CHECK ICON ================= */
+/* =================================================
+   BLINKING / PULSE CHECK LIGHT
+================================================= */
 
 .check{
     width:58px;
@@ -301,12 +280,53 @@ h1 span{
 
     font-size:39px;
 
+    font-weight:bold;
+
+    border:2px solid rgba(0,255,120,.75);
+
     box-shadow:
-    0 0 20px rgba(0,255,110,.65);
+        0 0 8px rgba(0,255,120,.8),
+        0 0 18px rgba(0,255,120,.55),
+        0 0 32px rgba(0,255,120,.35);
+
+    animation:
+        checkGlow 1.3s ease-in-out infinite;
 }
 
 
-/* ================= BOTTOM ================= */
+/* LIGHT PULSE */
+
+@keyframes checkGlow{
+
+    0%,100%{
+
+        box-shadow:
+            0 0 6px rgba(0,255,120,.45),
+            0 0 14px rgba(0,255,120,.25),
+            0 0 24px rgba(0,255,120,.15);
+
+        border-color:
+            rgba(0,255,120,.5);
+
+        transform:scale(1);
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 12px rgba(0,255,120,1),
+            0 0 28px rgba(0,255,120,.8),
+            0 0 48px rgba(0,255,120,.55);
+
+        border-color:
+            rgba(0,255,120,1);
+
+        transform:scale(1.04);
+    }
+}
+
+
+/* WARNING */
 
 .warning{
     margin:24px 0 0;
@@ -318,6 +338,9 @@ h1 span{
     font-size:16px;
 }
 
+
+/* AGREEMENT */
+
 .agree{
     margin-top:28px;
 
@@ -327,6 +350,9 @@ h1 span{
 
     font-size:16px;
 }
+
+
+/* BOTTOM */
 
 .bottom{
     margin-top:72px;
@@ -349,7 +375,7 @@ h1 span{
 }
 
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media(max-width:520px){
 
@@ -396,6 +422,7 @@ h1 span{
     .feature{
         font-size:23px;
     }
+
 }
 
 </style>
@@ -413,13 +440,8 @@ h1 span{
 <!-- =================================================
      PHOTO / PNG LOGO
 
-     अपनी फोटो का नाम बदलना हो तो:
-
-     logo.png
-     logo.jpg
-     logo.webp
-
-     इनमें से जो इस्तेमाल करना है वो यहाँ लिखो।
+     अपनी फोटो को इसी folder में "logo.png"
+     नाम से रख सकते हो।
 ================================================== -->
 
 <img
@@ -429,21 +451,21 @@ h1 span{
 >
 
 
-<!-- ================= TITLE ================= -->
+<!-- TITLE -->
 
 <h1>
     Trade With Munaf<span>™</span>
 </h1>
 
 
-<!-- ================= TRUSTED ================= -->
+<!-- TRUSTED -->
 
 <div class="trusted">
     ✅ Trusted by thousands of learners
 </div>
 
 
-<!-- ================= INFO ================= -->
+<!-- INFO -->
 
 <div class="info">
     24/7 Updates
@@ -454,7 +476,7 @@ h1 span{
 </div>
 
 
-<!-- ================= AUTO JOIN ================= -->
+<!-- COUNTDOWN -->
 
 <div class="notice">
 
@@ -469,7 +491,7 @@ h1 span{
 </div>
 
 
-<!-- ================= TELEGRAM BUTTON ================= -->
+<!-- TELEGRAM BUTTON -->
 
 <button
     class="cta"
@@ -481,7 +503,7 @@ h1 span{
 </button>
 
 
-<!-- ================= FEATURES ================= -->
+<!-- FEATURES -->
 
 <div class="features">
 
@@ -528,25 +550,21 @@ h1 span{
 </div>
 
 
-<!-- ================= WARNING ================= -->
+<!-- WARNING -->
 
 <div class="warning">
-
     ⚠️ Only serious learners join the Telegram channel.
-
 </div>
 
 
-<!-- ================= AGREEMENT ================= -->
+<!-- AGREEMENT -->
 
 <div class="agree">
-
     By joining, you agree to be contacted for updates.
-
 </div>
 
 
-<!-- ================= BOTTOM ================= -->
+<!-- BOTTOM -->
 
 <div class="bottom">
 
@@ -554,11 +572,8 @@ h1 span{
 
     <br>
 
-    <a
-        href="#"
-        onclick="return false;"
-    >
-        Click 👉 Kunal Ads Agency
+    <a href="#" onclick="return false;">
+        Click 👉 Yash Ads Agency
     </a>
 
 </div>
@@ -569,31 +584,21 @@ h1 span{
 </div>
 
 
-<!-- ================= JAVASCRIPT ================= -->
-
 <script>
 
-/*
-====================================================
-TELEGRAM LINK
-====================================================
-*/
+/* ================================================
+   TELEGRAM LINK
+================================================ */
 
 const TELEGRAM_URL =
 "https://t.me/+d1faOsQ-YbswNDg1";
 
 
-/*
-====================================================
-JOIN TELEGRAM
-====================================================
-*/
+/* ================================================
+   TELEGRAM BUTTON
+================================================ */
 
 function joinTelegram(){
-
-    /*
-       Lead event
-    */
 
     if(typeof fbq === "function"){
 
@@ -604,22 +609,14 @@ function joinTelegram(){
 
     }
 
-
-    /*
-       Telegram खोलना
-    */
-
     window.location.href =
         TELEGRAM_URL;
-
 }
 
 
-/*
-====================================================
-COUNTDOWN
-====================================================
-*/
+/* ================================================
+   AUTO COUNTDOWN
+================================================ */
 
 let seconds = 22;
 
@@ -639,11 +636,6 @@ const timer =
         if(seconds <= 0){
 
             clearInterval(timer);
-
-
-            /*
-               Auto redirect
-            */
 
             window.location.href =
                 TELEGRAM_URL;
